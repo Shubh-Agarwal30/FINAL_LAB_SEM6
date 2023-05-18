@@ -1,0 +1,37 @@
+CREATE DATABASE   database_name;
+
+CREATE TABLE Employee
+
+(
+
+ID INTEGER,
+
+NAME VARCHAR(20),
+
+SALARY INTEGER
+
+)
+
+
+INSERT INTO Employee VALUES(1,'Mandy',12000);
+
+INSERT INTO Employee VALUES(2,'Chris',15000);
+
+INSERT INTO Employee VALUES(3,'Henry',10000);
+
+INSERT INTO Employee VALUES(4,'Katy',10000);
+
+    INSERT INTO Employee values(5,'Adams',11000);
+
+SELECT MAX(SALARY) FROM Employee;
+
+SELECT MAX(SALARY) FROM Employee WHERE SALARY < (SELECT MAX(SALARY) FROM Employee);
+
+
+
+
+*******************************************************
+
+SELECT DISTINCT SALARY
+FROM Employee e1
+WHERE 4 = (SELECT COUNT(DISTINCT SALARY) ;
