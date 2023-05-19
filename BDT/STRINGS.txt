@@ -1,0 +1,21 @@
+Strings CODE
+# CODE 1
+
+object Demo {
+   val greeting: String = "Hello, world!"
+
+   def main(args: Array[String]) {
+      println( greeting )
+   }
+}
+
+****************************************
+# CODE 2
+object Demo {
+   def main(args: Array[String]) {
+      var palindrome = "Dot saw I was Tod";
+      var len = palindrome.length();
+
+      println( "String Length is : " + len );
+   }
+}
