@@ -1,0 +1,24 @@
+CREATE TABLE employee (
+  emp_id INTEGER PRIMARY KEY,
+  emp_name TEXT,
+  Salary INTEGER 
+);
+
+INSERT INTO employee VALUES (1, 'Ryan', 10000);
+INSERT INTO employee VALUES (2, 'Jack', 20000);
+INSERT INTO employee VALUES (3, 'Sam',5000);
+INSERT INTO employee VALUES (4,'Abhi', 8000);
+INSERT INTO employee VALUES (5, 'Avinash', 70000);
+INSERT INTO employee VALUES (6, 'Saurav', 9000);
+
+SELECT * FROM employee;
+
+-- 2nd Highest Salary
+SELECT MAX(Salary) FROM employee WHERE Salary < (SELECT MAX(Salary) FROM 
+employee );
+
+-- Nth highest salary 
+SELECT distinct Salary FROM employee order by Salary desc limit 4;
+SELECT MIN(Salary) FROM (SELECT distinct Salary FROM employee order by Salary desc limit 4);
+
+SELECT emp_name FROM employee where Salary = (SELECT MAX(Salary) FROM employee);
